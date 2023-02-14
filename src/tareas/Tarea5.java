@@ -1,24 +1,21 @@
 package tareas;
 
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Tarea5 {
 
 	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		System.out.println("ingrese un numero para saber su mes");
-		int numeroMes =  scanner.nextInt();
+		String nombreMes = (JOptionPane.showInputDialog(null, "Ingrese el mes:")).toLowerCase();
 		
-		switch (numeroMes) {
-		case 1:
-			System.out.println(numeroMes + " == ENERO");
+		switch (nombreMes) {
+		case "enero":
+			System.out.println(nombreMes + " es 1");
 			System.out.println("el mes tiene 31 dias");
 			break;
 		
-		case 2:
-			System.out.println(numeroMes + " == FEBRERO");
-			System.out.println("ingrese un numero para saber su mes");
-			int anio =  scanner.nextInt();
+		case "febrero":
+			System.out.println(nombreMes + " es 2");
+			int anio = Integer.parseInt(JOptionPane.showInputDialog(null, "ingrese un año para saber los dias"));
 			if((anio % 400 == 0) || (anio % 4 == 0) || !(anio % 100 == 0)) {
 				System.out.println("este año tiene 29 dias");
 			}
@@ -27,45 +24,45 @@ public class Tarea5 {
 			}
 			break;
 			
-		case 3:
-			System.out.println(numeroMes + " == MARZO");
+		case "marzo":
+			System.out.println(nombreMes + " es 3");
 			System.out.println("el mes tiene 31 dias");
 			break;
 		
-		case 4:
-			System.out.println(numeroMes + " == ABRIL");
+		case "abril":
+			System.out.println(nombreMes + " es 4");
 			System.out.println("el mes tiene 30 dias");
 			break;
-		case 5:
-			System.out.println(numeroMes + " == MAYO");
+		case "mayo":
+			System.out.println(nombreMes + " es 5");
 			System.out.println("el mes tiene 31 dias");
 			break;
-		case 6:
-			System.out.println(numeroMes + " == JUNIO");
+		case "junio":
+			System.out.println(nombreMes + " es 6");
 			System.out.println("el mes tiene 30 dias");
 			break;
-		case 7:
-			System.out.println(numeroMes + " == JULIO");
+		case "julio":
+			System.out.println(nombreMes + " es 7");
 			System.out.println("el mes tiene 31 dias");
 			break;
-		case 8:
-			System.out.println(numeroMes + " == AGOSTO");
+		case "agosto":
+			System.out.println(nombreMes + " es 8");
 			System.out.println("el mes tiene 31 dias");
 			break;
-		case 9:
-			System.out.println(numeroMes + " == SEPTIEMBRE");
+		case "septiembre":
+			System.out.println(nombreMes + " es 9");
 			System.out.println("el mes tiene 30 dias");
 			break;
-		case 10:
-			System.out.println(numeroMes + " == OCTUBRE");
+		case "octubre":
+			System.out.println(nombreMes + " es 10");
 			System.out.println("el mes tiene 31 dias");
 			break;
-		case 11:
-			System.out.println(numeroMes + " == NOVIEMBRE");
+		case "noviembre":
+			System.out.println(nombreMes + " es 11");
 			System.out.println("el mes tiene 30 dias");
 			break;
-		case 12:
-			System.out.println(numeroMes + " == DICIEMBRE");
+		case "diciembre":
+			System.out.println(nombreMes + " es 12");
 			System.out.println("el mes tiene 31 dias");
 			break;
 		default:
