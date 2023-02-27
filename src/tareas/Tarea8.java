@@ -19,7 +19,7 @@ public class Tarea8 {
 		int cantidadMaxima = 1;
 		
 		for(int i = 0; i < numerosAleatorios.length; i++) {
-			int cantidadRepeticiones =0;
+			int cantidadRepeticiones = 0;
 			for(int j = 0; j < numerosAleatorios.length; j++) {
 				if((numerosAleatorios[i] == numerosAleatorios[j])) {
 					cantidadRepeticiones++;
