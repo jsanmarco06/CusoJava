@@ -14,21 +14,26 @@ public class Tarea8 {
 		for(int i = 0; i < numerosAleatorios.length; i++) {
 			numerosAleatorios[i] = s.nextInt();
 		}
+		
 		int numeroRepetido = -1;
-		int cantidadRepeticiones =0;
-		for(int i = 0; i < numerosAleatorios.length - 1; i++) {
-			for(int j = i + 1; j < numerosAleatorios.length; j++) {
+		int cantidadMaxima = 1;
+		
+		for(int i = 0; i < numerosAleatorios.length; i++) {
+			int cantidadRepeticiones =0;
+			for(int j = 0; j < numerosAleatorios.length; j++) {
 				if((numerosAleatorios[i] == numerosAleatorios[j])) {
-					numeroRepetido = numerosAleatorios[i];
-					if(numeroRepetido == numerosAleatorios[i]) {
-						cantidadRepeticiones++;
+					cantidadRepeticiones++;
+					if(cantidadRepeticiones > cantidadMaxima) {
+						cantidadMaxima = cantidadRepeticiones;
+						numeroRepetido = numerosAleatorios[i];
 					}
 				}
 				
 			}
 		}
+
 		System.out.println("numero repetido: " + numeroRepetido);
-		System.out.println("cant repetido: " + cantidadRepeticiones);
+		System.out.println("cant repetido: " + cantidadMaxima);
 
 	}
 
